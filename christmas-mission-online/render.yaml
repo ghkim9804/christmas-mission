@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: christmas-mission-live
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_PIN
+        generateValue: true
+      - key: NODE_ENV
+        value: production
